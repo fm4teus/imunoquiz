@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Show do Milhão</title>
+    </head>
+    <body>
+        <header>
+            <h1>Shoooow do Milhão!</h1>
+        </header>
+        <main>
+        </main>
+        <footer>
+            <h3>Acertos: 0 <br> Erros: 0</h3>
+            <script>
+                let mainElement = document.querySelector( "main" );
+
+                const questao = {
+                    pergunta: "",
+                    alternativa: []
+                }
+
+                function novaQuestao(pergunta, alternativa = []){
+                    questao.pergunta = pergunta;
+                    questao.alternativa = alternativa;
+                    return questao;
+                };
+
+                function apagatudo(){
+                        mainElement.innerHTML = '';
+                    }
+
+                let questionario = novaQuestao( "pergunta?", ["Resposta 1", "Resposta 2", "Reposta 3"]);
+
+                console.log( questionario );
+
+                function renderQuestao( questionario ) {
+                    let perguntaElement = document.createElement('h3');
+                    let perguntaText = document.createTextNode( questionario.pergunta );
+                    
+                    perguntaElement.appendChild(perguntaText);
+                    mainElement.appendChild(perguntaElement);
+
+                    for(alternativa in questionario.alternativa){
+                        
+
+                        let alternativaElement = document.createElement("button");
+                        let alternativaText = document.createTextNode( questionario.alternativa[alternativa] );
+                        
+                        alternativaElement.setAttribute('onclick','apagatudo()');
+                        alternativaElement.appendChild(alternativaText);
+                        mainElement.appendChild(alternativaElement);
+
+                        
+                    }
+
+                    
+                }; 
+
+                renderQuestao( questionario );
+            </script>
+        </footer>
+    </body>
+</html>
