@@ -25,17 +25,17 @@ class questao {
     }
 }
 
-const questionario = [new questao("quando é comemorada a independencia do Brasil?", ["4 de Julho", "15 de Novembro", "7 de Setembro"], 2),
-new questao("quanto é a raiz quadrada de 144?", ["13", "-11", "12", "5"], 2),
-new questao("quanto é a raiz quadrada de 169?", ["13", "-11", "12", "5"], 0),
-new questao("Quem compôs \"Here comes the Sun\"?", ["John Lennon", "Eric Clapton", "Paul McCartney", "George Harrison"], 3),
-new questao("Qual é o aniversário da Aniely?", ["12/03", "16/09", "16/10", "10/12", "18/10"], 2),
-new questao("Qual imagem representa um tecido em necrose do tipo caseosa?", ["$herpes", "$necrose-caseosa", "beterraba", "$necrose-liquefacao", "$saudavel"], 1),
-new questao("Área de necrose isquêmica, causada poroclusão do suprimento arterial ou drenagem venosa em um determinado tecido. <br>O texto está se referindo a: ", ["A choque séptico", "A choque hipovolêmico", "A choque cardiogênico", "A infarto", "À embolia gordurosa"], 3),
-new questao("Sobre a necrose, marque a alternativa INCORRETA: ", ["Morte ativa, com gasto de ATP", "Tipo de morte celular", "Morte por estímulo patológico", "Processo celular irreversível"], 0),
-new questao("No cérebro , após um quadro de isquemia, ocorre frequentemente: ", ["necrose caseosa", "necrose de liquefação", "necrose de coagulação", "necrose gordurosa", "infarto isquêmico"], 1),
-new questao("São características vida necrose celular, EXCETO: ", ["Desintegração das organelas celulares", "Tumefação celular seguida de lise", "causa inflamação local", "Ocorre perda de integridade da membrana plasmática", "morte celular ativa, com gasto de energia"], 4),
-new questao("Com relação ao processo de necrose celular analise as afirmativas: <br>I - Ao entrar em necrose, uma célula sempre diminui de tamanho. <br>II - Não ocorre dano mitocondrial durante a necrose celular.", ["Todas as alternativas estão corretas", "Apenas a alternativa II está correta", "Apenas a alternativa I está correta", "Todas as alternativas estão incorretas"], 3),
+const questionario = [new questao("quando é comemorada a independencia do Brasil?<br>", ["4 de Julho", "15 de Novembro", "7 de Setembro"], 2),
+new questao("quanto é a raiz quadrada de 144?<br>", ["13", "-11", "12", "5"], 2),
+new questao("quanto é a raiz quadrada de 169<br>?", ["13", "-11", "12", "5"], 0),
+new questao("Quem compôs \"Here comes the Sun\"?<br>", ["John Lennon", "Eric Clapton", "Paul McCartney", "George Harrison"], 3),
+new questao("Qual é o aniversário da Aniely?<br>", ["12/03", "16/09", "16/10", "10/12", "18/10"], 2),
+new questao("Qual imagem representa um tecido em necrose do tipo caseosa?<br>", ["$herpes", "$necrose-caseosa", "beterraba", "$necrose-liquefacao", "$saudavel"], 1),
+new questao("Área de necrose isquêmica, causada poroclusão do suprimento arterial ou drenagem venosa em um determinado tecido. <br>O texto está se referindo a: <br>", ["A choque séptico", "A choque hipovolêmico", "A choque cardiogênico", "A infarto", "À embolia gordurosa"], 3),
+new questao("Sobre a necrose, marque a alternativa INCORRETA: <br>", ["Morte ativa, com gasto de ATP", "Tipo de morte celular", "Morte por estímulo patológico", "Processo celular irreversível"], 0),
+new questao("No cérebro , após um quadro de isquemia, ocorre frequentemente: <br>", ["necrose caseosa", "necrose de liquefação", "necrose de coagulação", "necrose gordurosa", "infarto isquêmico"], 1),
+new questao("São características vida necrose celular, EXCETO: <br>", ["Desintegração das organelas celulares", "Tumefação celular seguida de lise", "causa inflamação local", "Ocorre perda de integridade da membrana plasmática", "morte celular ativa, com gasto de energia"], 4),
+new questao("Com relação ao processo de necrose celular analise as afirmativas: <br>I - Ao entrar em necrose, uma célula sempre diminui de tamanho. <br>II - Não ocorre dano mitocondrial durante a necrose celular.<br>", ["Todas as alternativas estão corretas", "Apenas a alternativa II está correta", "Apenas a alternativa I está correta", "Todas as alternativas estão incorretas"], 3),
 ];
 
 let gabarito = [];
