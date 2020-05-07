@@ -4,9 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Show do Milhão</title>
-    <link rel="stylesheet" href="./style.css">
     <style>
-
         body {
             text-align: center;
             color: #eeeeee;
@@ -14,6 +12,10 @@
             background-color: #555555;
             width: 40em;
             margin: 0 auto;
+        }
+
+        img {
+            width: 90%;
         }
 
         button {
@@ -39,7 +41,6 @@
         <section id="questao"></section>
     </main>
     <footer>
-        <h3>Acertos: 0 <br> Erros: 0</h3>
         <script>
             let questaoElement = document.querySelector("section#questao");
             let footerElement = document.querySelector("footer");
@@ -48,11 +49,14 @@
             proximoElement.setAttribute('onclick', 'proximaQuestao()');
             proximoElement.appendChild(proximoText);
 
+            let primeiroElement = document.createElement("button");
+            let primeiroText = document.createTextNode("Iniciar IMUNOquiz");
+            primeiroElement.setAttribute('onclick', 'proximaQuestao()');
+            primeiroElement.appendChild(primeiroText);
+
             let acertos = 0;
             let erros = 0;
-            let questaoNumero = 0;
-
-
+            let questaoNumero = -1;
 
             class questao {
                 constructor(pergunta, alternativa = [], certa) {
@@ -60,7 +64,27 @@
                     this.alternativa = alternativa;
                     this.certa = certa;
                 }
+            }
 
+            function renderFim() {
+                questaoElement.innerHTML = "<h1>GGWP<br>GABARITO</h1>";
+                renderGabarito();
+            }
+
+            function renderGabarito() {
+                for (questaoNumero in questionario) {
+                    let perguntaElement = document.createElement('h3');
+                    let perguntaText = document.createTextNode(questionario[questaoNumero].pergunta);
+
+                    perguntaElement.appendChild(perguntaText);
+                    questaoElement.appendChild(perguntaElement);
+
+                    let alternativaElement = document.createElement("button");
+                    let alternativaText = document.createTextNode(questionario[questaoNumero].alternativa[questionario[questaoNumero].certa]);
+                    
+                    alternativaElement.appendChild(alternativaText);
+                    questaoElement.appendChild(alternativaElement);
+                }
             }
 
             function proximaQuestao() {
@@ -68,6 +92,8 @@
                 console.log(questaoNumero);
                 if (questaoNumero < questionario.length)
                     renderQuestao(questionario[questaoNumero]);
+                else
+                    renderFim();
             }
 
 
@@ -90,6 +116,8 @@
             new questao("quanto é a raiz quadrada de 144?", ["13", "-11", "12", "5"], 2),
             new questao("quanto é a raiz quadrada de 169?", ["13", "-11", "12", "5"], 0),
             new questao("Quem compôs \"Here comes the Sun\"?", ["John Lennon", "Eric Clapton", "Paul McCartney", "George Harrison"], 3),
+            new questao("Qual é o aniversário da Aniely?", ["12/03", "16/09", "16/10", "10/12", "18/10"], 2),
+            new questao("Qual imagem representa um tecido em necrose do tipo caseosa?", ["$herpes", "$necrose-caseosa", "beterraba", "$necrose-liquefacao", "$saudavel"] , 1),
             ];
             console.log(questionario);
 
@@ -103,14 +131,21 @@
 
                 for (alternativa in questao.alternativa) {
 
-
                     let alternativaElement = document.createElement("button");
-                    let alternativaText = document.createTextNode(questao.alternativa[alternativa]);
+                    if(questao.alternativa[alternativa][0]=='$'){
+                        const imgElement = document.createElement("img");
+                        imgElement.setAttribute('src','./files/'+questao.alternativa[alternativa]+'.jpg');
+                        alternativaElement.appendChild(imgElement);
+                    }
+                    else{
+                        const alternativaText = document.createTextNode(questao.alternativa[alternativa]);
+                        alternativaElement.appendChild(alternativaText);
+                    }
+                        
                     if (alternativa == questao.certa)
                         alternativaElement.setAttribute('onclick', 'acertou()');
                     else
                         alternativaElement.setAttribute('onclick', 'errou()');
-                    alternativaElement.appendChild(alternativaText);
                     questaoElement.appendChild(alternativaElement);
                     const breakElement = document.createElement("br");
                     questaoElement.appendChild(breakElement);
@@ -119,7 +154,15 @@
 
 
             };
-            renderQuestao(questionario[questaoNumero]);
+
+            function render() {
+
+                questaoElement.appendChild(primeiroElement);
+            }
+
+            render();
+
+
         </script>
     </footer>
 </body>
