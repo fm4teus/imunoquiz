@@ -14,6 +14,10 @@ h1{
 
 }
 
+body main section#questao h3{
+    font-size: 1em;
+}
+
 main section#titulo{
     font-size: 2em;
 }
