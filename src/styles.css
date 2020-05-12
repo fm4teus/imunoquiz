@@ -1,3 +1,12 @@
+*{
+    font-size-adjust: none;
+}
+
+main #container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 body {
     text-align: center;
     color: #333333;
@@ -14,9 +23,6 @@ h1{
 
 }
 
-body main section#questao h3{
-    font-size: 1em;
-}
 
 main section#titulo{
     font-size: 2em;
