@@ -49,9 +49,10 @@ a{
     section#description{
         padding: 4em 0;
     }
-
-    body{
-        color: #aa0000;
+    button{
+        font-size: 4em;
     }
+
+    
     
 }
