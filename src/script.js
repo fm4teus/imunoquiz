@@ -6,10 +6,6 @@ let proximoText = document.createTextNode("Próxima questão");
 proximoElement.setAttribute('onclick', 'proximaQuestao()');
 proximoElement.appendChild(proximoText);
 
-let primeiroElement = document.createElement("button");
-let primeiroText = document.createTextNode("Iniciar IMUNOquiz");
-primeiroElement.setAttribute('onclick', 'proximaQuestao()');
-primeiroElement.appendChild(primeiroText);
 
 let acertos = 0;
 let erros = 0;
@@ -72,10 +68,11 @@ function renderGabarito() {
 }
 
 function proximaQuestao() {
+    
     contador++;
     questionario.splice(questaoNumero,1);
     questaoNumero = Math.floor(Math.random()*questionario.length);
-
+    console.log(contador);
     console.log(questionario);
     if (contador<6)
         renderQuestao(questionario[questaoNumero]);
@@ -133,12 +130,8 @@ function renderQuestao(questao) {
 
     gabarito[contador] = questionario[questaoNumero];
 
+    
 
 };
 
-function render() {
-
-    questaoElement.appendChild(primeiroElement);
-}
-
-render();
+proximaQuestao();

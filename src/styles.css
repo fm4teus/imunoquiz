@@ -12,9 +12,10 @@ body {
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eeeeee;
-    width: 100%;
+    min-width: 100%;
     margin: 0 auto;
     font-size: 1em;
+    height: 100%;   
 }
 
 h1{
@@ -32,12 +33,6 @@ main section#questao{
     font-size: 1.6em;
 }
 
-header{
-    color: #eeeeee;
-    background-color: #2244aa;
-    padding: 2em;
-    box-shadow: 0px 4px 16px 4px #333333aa;
-}
 
 img {
     width: 90%;
