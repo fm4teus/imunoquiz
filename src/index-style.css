@@ -7,13 +7,31 @@ body{
     background-size: cover;
     background-color: #333333aa;
     color: #eeeeee;
+    margin: 0;
+    
+  font-family: 'Montserrat', sans-serif;
 }
 
+ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: #4841A4;
+}
 
 
 p {  
   font-size: 1.6em;
-  font-family: 'Montserrat', sans-serif;
 }
 
 
