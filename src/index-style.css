@@ -24,7 +24,8 @@ li{
 }
 
 footer{
-    position: relative;
+    width: 100%;
+    position: absolute;
     bottom: 0;
     background-color: #4841A4;
 }
@@ -41,7 +42,9 @@ h1{
     margin: 2em 0 1em;
 }
 
-main #container{
+#container{
+    position: relative;
+    min-height: 100vh;
     width: 100%;
 }
 
