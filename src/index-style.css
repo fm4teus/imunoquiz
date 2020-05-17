@@ -18,10 +18,16 @@ ul{
     padding: 0;
 }
 
+li{
+    padding: 0.4em;
+}
+
 
 footer{
     width: 100%;
-    position: absolute;
+    padding: 1.6em 0;
+    margin-top: 4em;
+    position: relative;
     bottom: 0;
     background-color: #4841A4;
 }
@@ -48,7 +54,7 @@ h1{
 
 section#description{
     background-color: #4841A4aa;
-    padding: 2em 0;
+    padding: 2em 1.6em;
     backdrop-filter: blur(1em);
 }
 
