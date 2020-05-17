@@ -83,14 +83,20 @@ function proximaQuestao() {
 
 
 function acertou() {
+    const imgElement = document.createElement("img");
+    imgElement.setAttribute('src',`./files/acertou/${Math.floor(Math.random()*8)}.jpg`);
     questaoElement.innerHTML = '<h1>Certa resposta!</h1>';
+    questaoElement.appendChild(imgElement);
     questaoElement.appendChild(proximoElement);
     acertos++;
     footerElement.innerHTML = '<h3>acertos: ' + acertos + '<br>erros: ' + erros + '<h3>'
 }
 
 function errou() {
+    const imgElement = document.createElement("img");
+    imgElement.setAttribute('src',`./files/errou/${Math.floor(Math.random()*8)}.jpg`);
     questaoElement.innerHTML = '<h1>Errrrrrrouuu</h1>';
+    questaoElement.appendChild(imgElement);
     questaoElement.appendChild(proximoElement);
     erros++;
     footerElement.innerHTML = '<h3>acertos: ' + acertos + '<br>erros: ' + erros + '<h3>'
