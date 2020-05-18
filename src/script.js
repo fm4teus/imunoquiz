@@ -3,6 +3,20 @@ let tituloElement = document.querySelector("section#titulo");
 let footerElement = document.querySelector("footer");
 let proximoElement = document.createElement("button");
 let proximoText = document.createTextNode("Próxima questão");
+
+const placarElement = document.createElement('div');
+placarElement.className = "placar";
+
+const acertosElement = document.createElement('div');
+acertosElement.className = "acertos";
+const errosElement = document.createElement('div');
+errosElement.className = "erros";
+
+
+placarElement.appendChild(acertosElement);
+placarElement.appendChild(errosElement);
+
+
 proximoElement.setAttribute('onclick', 'proximaQuestao()');
 proximoElement.appendChild(proximoText);
 
@@ -45,6 +59,7 @@ function renderFim() {
 
 function renderGabarito() {
     console.log(gabarito);
+    questaoElement.appendChild(placarElement);
     for (questaoNumero in gabarito) {
         let perguntaElement = document.createElement('h3');
 
@@ -89,8 +104,13 @@ function acertou() {
     questaoElement.appendChild(imgElement);
     questaoElement.appendChild(proximoElement);
     acertos++;
-    footerElement.innerHTML = '<h3>acertos: ' + acertos + '<br>erros: ' + erros + '<h3>'
+    
+    acertosElement.innerHTML = `acertos: ${acertos}`;
+    errosElement.innerHTML = `erros: ${erros}`;
+    footerElement.innerHTML = '';
+    footerElement.appendChild(placarElement);
 }
+
 
 function errou() {
     const imgElement = document.createElement("img");
@@ -99,7 +119,11 @@ function errou() {
     questaoElement.appendChild(imgElement);
     questaoElement.appendChild(proximoElement);
     erros++;
-    footerElement.innerHTML = '<h3>acertos: ' + acertos + '<br>erros: ' + erros + '<h3>'
+
+    acertosElement.innerHTML = `acertos: ${acertos}`;
+    errosElement.innerHTML = `erros: ${erros}`;
+    footerElement.innerHTML = '';
+    footerElement.appendChild(placarElement);
 }
 
 

@@ -33,7 +33,7 @@ main section#questao{
 }
 
 img{
-    width: 60%;
+    width: 16em;
 }
 
 button img {
@@ -56,6 +56,33 @@ button {
 button:hover{
     box-shadow: none;
 }
+
+div.placar{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2em;
+    color: #eeeeee;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 1.6em;
+}
+
+div.placar div.acertos{
+    background-color: #00cc1188;    
+}
+
+div.placar div.erros{
+    background-color: #cc001188;
+}
+
+div.placar div.erros,
+div.placar div.acertos{
+    margin: 0 auto;
+    border-radius: 2em;
+    padding: 1em;
+    width: 80%;
+}
+
 
 @media only screen and (orientation: portrait){
     img{
