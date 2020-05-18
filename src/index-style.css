@@ -27,7 +27,6 @@ li{
 footer{
     width: 100%;
     padding: 1.6em 0;
-    margin-top: 4em;
     position: relative;
     bottom: 0;
     background-color: #4841A4;
@@ -46,14 +45,19 @@ h1{
 }
 
 #container{
-    background-image: url(../files/corona.jpg);
-    background-size: cover;
+    background-color: #aaaaaa;
     position: relative;
+    height: auto;
     min-height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 70% auto;
+    grid-template-rows: auto auto auto;
 }
+
+main{
+    background-image: url("../files/corona.jpg");
+}
+
 
 section#description{
     background-color: #4841A4aa;
@@ -70,6 +74,22 @@ button{
 a{
     text-decoration: none;
 }
+
+.instructions{
+    background-color: #4841A4;
+    max-height: 500px;
+    transition: 1s;
+}
+
+.hide{
+    max-height: 0;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+    
+    overflow: hidden;
+}
+
 
 @media only screen and (orientation: portrait) {
     h1{

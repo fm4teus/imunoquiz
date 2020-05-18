@@ -20,11 +20,18 @@
                 <p>IMUNOquiz é um trabalho da turma de Imunologia do segundo período de Odontologia do Pitágoras-Betim, que tem como objetivo estudar e revisar conceitos desenvolvidos no decorrer da matéria.</p>
                 <a href="./game.html"><button>JOGAR AGORA</button></a>
             </section>
-            <section id="instructions">
-
-            </section>
-        
+            
+            <button onclick="renderInstructions()"> instruções </button>  
     </main>
+
+    
+
+    <section class="instructions hide">
+        <h1>aqui estao as instruções!</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa architecto deserunt magnam error quisquam, fugit cupiditate expedita quibusdam facere ratione delectus. Nisi provident recusandae sit quos, non odio necessitatibus.</p>
+    </section>
+    
+    
     <footer>
         <h2>Integrantes</h2>
         <ul>
@@ -35,6 +42,13 @@
         </ul>
     </footer>
 </div>
+<script>
+    const instructionsElement = document.querySelector("section.instructions");
+
+    function renderInstructions(){
+    instructionsElement.classList.toggle("hide");
+}
+</script>
 </body>
 
 </html>

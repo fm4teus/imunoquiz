@@ -4,6 +4,8 @@ let footerElement = document.querySelector("footer");
 let proximoElement = document.createElement("button");
 let proximoText = document.createTextNode("Próxima questão");
 
+
+
 const placarElement = document.createElement('div');
 placarElement.className = "placar";
 
@@ -41,11 +43,13 @@ new questao("quanto é a raiz quadrada de 169?", ["13", "-11", "12", "5"], 0),
 new questao("Quem compôs \"Here comes the Sun\"?", ["John Lennon", "Eric Clapton", "Paul McCartney", "George Harrison"], 3),
 new questao("Qual é o aniversário da Aniely?", ["12/03", "16/09", "16/10", "10/12", "18/10"], 2),
 new questao("Qual imagem representa um tecido em necrose do tipo caseosa?", ["$herpes", "$necrose-caseosa", "beterraba", "$necrose-liquefacao", "$saudavel"], 1),
-new questao("Área de necrose isquêmica, causada poroclusão do suprimento arterial ou drenagem venosa em um determinado tecido. <br>O texto está se referindo a: </p>", ["A choque séptico", "A choque hipovolêmico", "A choque cardiogênico", "A infarto", "À embolia gordurosa"], 3),
+new questao("Área de necrose isquêmica, causada por oclusão do suprimento arterial ou drenagem venosa em um determinado tecido. <br>O texto está se referindo a: </p>", ["Choque séptico", "Choque hipovolêmico", "Choque cardiogênico", "Infarto", "Embolia gordurosa"], 3),
 new questao("Sobre a necrose, marque a alternativa INCORRETA: ", ["Morte ativa, com gasto de ATP", "Tipo de morte celular", "Morte por estímulo patológico", "Processo celular irreversível"], 0),
 new questao("No cérebro , após um quadro de isquemia, ocorre frequentemente: ", ["necrose caseosa", "necrose de liquefação", "necrose de coagulação", "necrose gordurosa", "infarto isquêmico"], 1),
 new questao("São características vida necrose celular, EXCETO: ", ["Desintegração das organelas celulares", "Tumefação celular seguida de lise", "causa inflamação local", "Ocorre perda de integridade da membrana plasmática", "morte celular ativa, com gasto de energia"], 4),
 new questao("Com relação ao processo de necrose celular analise as afirmativas: <br>I - Ao entrar em necrose, uma célula sempre diminui de tamanho. <br>II - Não ocorre dano mitocondrial durante a necrose celular.", ["Todas as alternativas estão corretas", "Apenas a alternativa II está correta", "Apenas a alternativa I está correta", "Todas as alternativas estão incorretas"], 3),
+new questao("Abscessos são áreas de infecção bacteriana purulenta que produzem uma nova cavidade no tecido. Esta nova cavidade resulta de uma necrose __________, por ação das enzimas proteolíticas das próprias bactérias, e dos neutrófilos atraídos para combatê-las. ", ["caseosa", "gomosa", "de coagulação", "de liquefação", "por gangrena"], 3),
+
 ];
 
 let gabarito = [];
@@ -164,9 +168,8 @@ function renderQuestao(questao) {
     }
 
     gabarito[contador] = questionario[questaoNumero];
-
-    
-
 };
+
+
 
 proximaQuestao();
