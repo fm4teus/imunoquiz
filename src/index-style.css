@@ -52,7 +52,7 @@ h1{
     min-height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 80% auto;
+    grid-template-rows: 70% auto;
 }
 
 section#description{
@@ -87,7 +87,7 @@ a{
     }
     ul{
         grid-template-columns: auto;
-        font-size: 1.6em;
+        font-size: 2.4em;
     }
 
     
