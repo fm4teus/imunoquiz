@@ -55,6 +55,7 @@ h1{
 }
 
 main{
+    background-repeat: no-repeat;
     background-image: url("../files/coronavirus.jpg");
 }
 
