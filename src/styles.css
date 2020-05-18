@@ -41,6 +41,7 @@ button img {
 }
 
 button {
+    outline: none;
     font-size: 1.4em;
     border: none;
     background-color: #dddddd;
@@ -60,7 +61,7 @@ button:hover{
 div.placar{
     width: 80%;
     margin: 0 auto;
-    padding-top: 2em;
+    padding-top: 1.5em;
     color: #eeeeee;
     display: grid;
     grid-template-columns: auto auto;
@@ -78,14 +79,25 @@ div.placar div.erros{
 div.placar div.erros,
 div.placar div.acertos{
     margin: 0 auto;
-    border-radius: 2em;
+    border-radius: 0.2em;
     padding: 1em;
-    width: 80%;
+    width: 60%;
+}
+
+div.placar div.erros h3,
+div.placar div.acertos h3{
+    margin: 0;
 }
 
 
 @media only screen and (orientation: portrait){
     img{
+        width: 90%;
+    }
+    main #container{
+        width: 100%;
+    }
+    button{
         width: 90%;
     }
 }

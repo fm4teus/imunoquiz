@@ -52,14 +52,14 @@ let gabarito = [];
 
 let questaoNumero = Math.floor(Math.random()*questionario.length);
 
-function renderFim() {
-    questaoElement.innerHTML = "<h1>GGWP<br>GABARITO</h1>";
-    renderGabarito();
-}
 
 function renderGabarito() {
     console.log(gabarito);
+    
+    tituloElement.innerHTML = "<h1>Resultado</h1>";
+    questaoElement.innerHTML = "";
     questaoElement.appendChild(placarElement);
+    
     for (questaoNumero in gabarito) {
         let perguntaElement = document.createElement('h3');
 
@@ -92,7 +92,7 @@ function proximaQuestao() {
     if (contador<6)
         renderQuestao(questionario[questaoNumero]);
     else
-        renderFim();
+        renderGabarito();
 }
 
 
@@ -102,11 +102,16 @@ function acertou() {
     imgElement.setAttribute('src',`./files/acertou/${Math.floor(Math.random()*8)}.jpg`);
     questaoElement.innerHTML = '<h1>Certa resposta!</h1>';
     questaoElement.appendChild(imgElement);
+    if(contador > 4){
+        proximoText = document.createTextNode("Ver Resultado e Gabarito");
+        proximoElement.innerHTML = "";
+        proximoElement.appendChild(proximoText);
+    }
     questaoElement.appendChild(proximoElement);
     acertos++;
     
-    acertosElement.innerHTML = `acertos: ${acertos}`;
-    errosElement.innerHTML = `erros: ${erros}`;
+    acertosElement.innerHTML = `<h3>acertos: </h3><br><h1>${acertos}</h1>`;
+    errosElement.innerHTML = `<h3>erros: </h3><br><h1>${erros}</h1>`;
     footerElement.innerHTML = '';
     footerElement.appendChild(placarElement);
 }
@@ -120,8 +125,8 @@ function errou() {
     questaoElement.appendChild(proximoElement);
     erros++;
 
-    acertosElement.innerHTML = `acertos: ${acertos}`;
-    errosElement.innerHTML = `erros: ${erros}`;
+    acertosElement.innerHTML = `<h3>acertos: </h3><br><h1>${acertos}</h1>`;
+    errosElement.innerHTML = `<h3>erros: </h3><br><h1>${erros}</h1>`;
     footerElement.innerHTML = '';
     footerElement.appendChild(placarElement);
 }
