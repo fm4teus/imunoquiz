@@ -45,7 +45,7 @@ h1{
 }
 
 #container{
-    background-color: #aaaaaa;
+    background-color: #4841A4;
     position: relative;
     height: auto;
     min-height: 100vh;
@@ -77,13 +77,14 @@ a{
 
 .instructions{
     background-color: #4841A4;
-    max-height: 500px;
-    transition: 1s;
+    max-height: 1500px;
+    transition: 1s ease-in-out;
 }
 
 .hide{
     max-height: 0;
-    transition: 1s;
+    transition: 1s ease-in-out;
+    transition-delay: max-height 50ms;
     opacity: 0;
     visibility: hidden;
     
@@ -92,6 +93,9 @@ a{
 
 
 @media only screen and (orientation: portrait) {
+    footer h2{
+        font-size: 3em;
+    }
     h1{
         font-size: 8em;
     }
