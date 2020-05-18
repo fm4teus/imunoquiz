@@ -55,14 +55,13 @@ h1{
 }
 
 main{
-    background-image: url("../files/corona.jpg");
+    background-image: url("../files/coronavirus.jpg");
 }
 
 
 section#description{
-    background-color: #4841A4aa;
     padding: 2em 1.6em;
-    backdrop-filter: blur(1em);
+    
 }
 
 button{
