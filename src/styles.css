@@ -2,6 +2,10 @@ html{
     text-size-adjust: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 main #container{
     width: 90%;
     margin: 0 auto;
@@ -88,6 +92,14 @@ div.placar div.acertos{
 div.placar div.erros h3,
 div.placar div.acertos h3{
     margin: 0;
+}
+
+button.start{
+    background-color: #333333;
+    color: #eeeeee;
+    font-size: 2em;
+    border-radius: 10px;
+    border: solid 2px #eeeeee;
 }
 
 

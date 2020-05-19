@@ -84,6 +84,15 @@ function renderGabarito() {
 
         questaoElement.appendChild(alternativaElement);
     }
+
+    const linkElement = document.createElement("a");
+    linkElement.setAttribute("href","./index.html");
+
+    const startElement = document.createElement("button");
+    startElement.className = "start";
+    startElement.innerHTML = "Jogar Novamente";
+    linkElement.appendChild(startElement);
+    questaoElement.appendChild(linkElement);
 }
 
 function proximaQuestao() {
