@@ -9,9 +9,9 @@ main #container{
 
 body {
     text-align: center;
-    color: #333333;
+    color: #eeeeee;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eeeeee;
+    background-color: #550000;
     min-width: 100%;
     margin: 0 auto;
     font-size: 1em;   
@@ -44,6 +44,7 @@ button {
     outline: none;
     font-size: 1.4em;
     border: none;
+    color: #222222;
     background-color: #dddddd;
     border-radius: 1em;
     display: block;
