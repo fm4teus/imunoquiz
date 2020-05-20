@@ -84,6 +84,7 @@ a{
     background-color: #660000;
     max-height: 1500px;
     transition: 1s ease-in-out;
+    padding: 0 10%;
 }
 
 .hide{

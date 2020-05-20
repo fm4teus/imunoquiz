@@ -197,7 +197,7 @@ function proximaQuestao() {
 function acertou() {
     const imgElement = document.createElement("img");
     imgElement.setAttribute('src',`./files/acertou/${Math.floor(Math.random()*8)}.jpg`);
-    questaoElement.innerHTML = '<h1>Certa resposta!</h1>';
+    questaoElement.innerHTML = '';
     questaoElement.appendChild(imgElement);
     if(contador > 4){
         proximoText = document.createTextNode("Ver Resultado e Gabarito");
@@ -207,8 +207,8 @@ function acertou() {
     questaoElement.appendChild(proximoElement);
     acertos++;
     
-    acertosElement.innerHTML = `<h3>acertos: </h3><br><h1>${acertos}</h1>`;
-    errosElement.innerHTML = `<h3>erros: </h3><br><h1>${erros}</h1>`;
+    acertosElement.innerHTML = `<h3>ACERTOS</h3><br><h1>${acertos}</h1>`;
+    errosElement.innerHTML = `<h3>ERROS</h3><br><h1>${erros}</h1>`;
     footerElement.innerHTML = '';
     footerElement.appendChild(placarElement);
 }
@@ -217,13 +217,13 @@ function acertou() {
 function errou() {
     const imgElement = document.createElement("img");
     imgElement.setAttribute('src',`./files/errou/${Math.floor(Math.random()*8)}.jpg`);
-    questaoElement.innerHTML = '<h1>Errrrrrrouuu</h1>';
+    questaoElement.innerHTML = '';
     questaoElement.appendChild(imgElement);
     questaoElement.appendChild(proximoElement);
     erros++;
 
-    acertosElement.innerHTML = `<h3>acertos: </h3><br><h1>${acertos}</h1>`;
-    errosElement.innerHTML = `<h3>erros: </h3><br><h1>${erros}</h1>`;
+    acertosElement.innerHTML = `<h3>ACERTOS</h3><br><h1>${acertos}</h1>`;
+    errosElement.innerHTML = `<h3>ERROS</h3><br><h1>${erros}</h1>`;
     footerElement.innerHTML = '';
     footerElement.appendChild(placarElement);
 }
