@@ -132,8 +132,19 @@ const questionario = [
 "$baco",
 "$cerebro",
 "$pele",
-"Nenhuma das alternativas anteriores"],1)
-
+"Nenhuma das alternativas anteriores"],1),
+    new questao("Quais das etapas descritas <strong>não</strong> correspondem as etapas da apoptose.",
+["Aumento da aderência da célula em apoptose com outras células.",
+"Desintegração do núcleo.",
+"Rompimento dos prolongamentos e formação de corpos apoptóticos.",
+"Fagocitose dos corpos apoptóticos."],0),
+    new questao("É correto afirmar na descrição da patogenia do mecanismo de lesão celular oxidativo.",
+["Acúmulo de água no interior das células",
+"Acúmulo de carboidrato no interior das células",
+"Acúmulo de lipídios no interior das células",
+"Acúmulo de radicais livres no interior das células."],3),
+    new questao("Sobre as causas mais comuns de lesão celular, marque alternativa incorreta.",
+["A ausência de CO<sub>2</sub> contribui para lesão celular."])
 ];
 
 let gabarito = [];
@@ -155,7 +166,7 @@ function renderGabarito() {
         questaoElement.appendChild(perguntaElement);
 
         let alternativaElement = document.createElement("button");
-
+        alternativaElement.className = "gabarito";
         if (gabarito[questaoNumero].alternativa[gabarito[questaoNumero].certa][0] == '$') {
             const imgElement = document.createElement("img");
             imgElement.setAttribute('src', './files/' + gabarito[questaoNumero].alternativa[gabarito[questaoNumero].certa] + '.jpg');

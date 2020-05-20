@@ -49,6 +49,14 @@ button img {
     width: 70%;
 }
 
+button.gabarito{
+    padding: 0.1em;
+    background-color: #444444;
+    color: #eeeeee;
+    border-radius: 0.1em;
+    border: solid 2px #770000;
+}
+
 button {
     outline: none;
     font-size: 1.4em;
@@ -78,11 +86,15 @@ div.placar{
 }
 
 div.placar div.acertos{
-    background-color: #009911;    
+    color: #009911;
+    border: 4px solid #009911;
+    background-color: #eeeeee;    
 }
 
 div.placar div.erros{
-    background-color: #cc0011;
+    color: #cc0011;
+    border: 4px solid #cc0011;
+    background-color: #eeeeee;
 }
 
 div.placar div.erros,
@@ -93,8 +105,8 @@ div.placar div.acertos{
     width: 60%;
 }
 
-div.placar div.erros h3,
-div.placar div.acertos h3{
+section#questao div.placar div.erros h3,
+section#questao div.placar div.acertos h3{
     margin: 0;
 }
 
