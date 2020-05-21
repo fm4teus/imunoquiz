@@ -144,7 +144,9 @@ const questionario = [
 "Acúmulo de lipídios no interior das células",
 "Acúmulo de radicais livres no interior das células."],3),
     new questao("Sobre as causas mais comuns de lesão celular, marque alternativa incorreta.",
-["A ausência de CO<sub>2</sub> contribui para lesão celular."])
+["A ausência de CO<sub>2</sub> contribui para lesão celular.",
+"Traumas e choques é considerado agente físicos, que contribuem para uma possível lesão celular.",
+"desequilíbrio nutricionais também podem causar lesão celular."],0)
 ];
 
 let gabarito = [];
@@ -173,8 +175,7 @@ function renderGabarito() {
             alternativaElement.appendChild(imgElement);
         }
         else {
-            const alternativaText = document.createTextNode(gabarito[questaoNumero].alternativa[gabarito[questaoNumero].certa]);
-            alternativaElement.appendChild(alternativaText);
+            alternativaElement.innerHTML = gabarito[questaoNumero].alternativa[gabarito[questaoNumero].certa];
         }
 
         questaoElement.appendChild(alternativaElement);
@@ -258,8 +259,7 @@ function renderQuestao(questao) {
             alternativaElement.appendChild(imgElement);
         }
         else {
-            const alternativaText = document.createTextNode(questao.alternativa[alternativa]);
-            alternativaElement.appendChild(alternativaText);
+            alternativaElement.innerHTML = questao.alternativa[alternativa];
         }
         if (alternativa == questao.certa)
             alternativaElement.setAttribute('onclick', 'acertou()');
