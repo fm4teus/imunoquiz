@@ -142,11 +142,7 @@ const questionario = [
 ["Acúmulo de água no interior das células",
 "Acúmulo de carboidrato no interior das células",
 "Acúmulo de lipídios no interior das células",
-"Acúmulo de radicais livres no interior das células."],3),
-    new questao("Sobre as causas mais comuns de lesão celular, marque alternativa incorreta.",
-["A ausência de CO<sub>2</sub> contribui para lesão celular.",
-"Traumas e choques é considerado agente físicos, que contribuem para uma possível lesão celular.",
-"desequilíbrio nutricionais também podem causar lesão celular."],0)
+"Acúmulo de radicais livres no interior das células."],3)
 ];
 
 let gabarito = [];
