@@ -62,7 +62,7 @@ const questionario = [
 "necrose de coagulação", 
 "necrose gordurosa", 
 "infarto isquêmico"], 1),
-    new questao("São características vida necrose celular, EXCETO: ",
+    new questao("São características da necrose celular, EXCETO: ",
 ["Desintegração das organelas celulares", 
 "Tumefação celular seguida de lise", 
 "causa inflamação local", 
