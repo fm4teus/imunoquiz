@@ -258,10 +258,8 @@ function renderQuestao(questao) {
             alternativaElement.innerHTML = questao.alternativa[alternativa];
         }
         if (alternativa == questao.certa)
-            //alternativaElement.setAttribute('onclick', 'acertou()');
             alternativaElement.onclick = acertou;
         else
-            //alternativaElement.setAttribute('onclick', 'errou()');
             alternativaElement.onclick = errou;
         questaoElement.appendChild(alternativaElement);
         const breakElement = document.createElement("br");
